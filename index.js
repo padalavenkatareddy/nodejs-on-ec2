@@ -1,7 +1,11 @@
-var http = require('http');
+const app = require("express")();
+app.get("/", (request ,response) => {
+  return response.send(
 
-//create a server object:
-http.createServer(function (req, res) {
-  res.write('** Happy Birthday Shweta !!!! **'); //write a response to the client
-  res.end(); //end the response
-}).listen(80); //the server object listens on port 80
+    <h1>
+             Hello OPTIT
+    </h1>
+  );
+});
+
+app.listen(3000, () => console.log("server running"));
